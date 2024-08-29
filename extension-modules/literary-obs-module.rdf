@@ -1,0 +1,490 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://www.loa.istc.cnr.it/literaryObs#"
+     xml:base="https://www.loa.istc.cnr.it/literaryObs"
+     xmlns:obs="https://www.loa.istc.cnr.it/obs#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://www.loa.istc.cnr.it/literaryObs">
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/appliedontolab/MITE/main/core-ontology/obs-module.rdf"/>
+        <rdfs:comment>Module for the representation of literary observations</rdfs:comment>
+        <rdfs:comment>For testing purposes, this file includes the specification of Abox individuals</rdfs:comment>
+        <owl:versionInfo>Created by: Emilio M. Sanfilippo, Claudio Masolo, and Alessandro Mosca in the context of the research project &quot;MITE - Make it explicit: Documenting interpretations of literary fictions with conceptual formal models&quot; (2023-2025) funded by the European Union - Next Generation EU.</owl:versionInfo>
+        <owl:versionInfo>STATUS: testing</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#hasResemblant -->
+
+    <owl:ObjectProperty rdf:about="https://www.loa.istc.cnr.it/literaryObs#hasResemblant">
+        <rdfs:subPropertyOf rdf:resource="https://www.loa.istc.cnr.it/obs#hasArgument"/>
+        <rdfs:domain rdf:resource="https://www.loa.istc.cnr.it/literaryObs#ResemblanceObs"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#hasResembled -->
+
+    <owl:ObjectProperty rdf:about="https://www.loa.istc.cnr.it/literaryObs#hasResembled">
+        <rdfs:subPropertyOf rdf:resource="https://www.loa.istc.cnr.it/obs#hasArgument"/>
+        <rdfs:domain rdf:resource="https://www.loa.istc.cnr.it/literaryObs#ResemblanceObs"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#Figure -->
+
+    <owl:Class rdf:about="https://www.loa.istc.cnr.it/literaryObs#Figure">
+        <rdfs:comment>This class is here used for testing purposes. It is meant to classify literary characters, characters appearing in religious texts, etc.</rdfs:comment>
+        <rdfs:label>Figure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#PatientObs -->
+
+    <owl:Class rdf:about="https://www.loa.istc.cnr.it/literaryObs#PatientObs">
+        <rdfs:subClassOf rdf:resource="https://www.loa.istc.cnr.it/obs#BasicObs"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.loa.istc.cnr.it/obs#hasArgument"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.loa.istc.cnr.it/literaryObs#Figure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://www.loa.istc.cnr.it/literaryObs#ResemblanceObs"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#ResemblanceObs -->
+
+    <owl:Class rdf:about="https://www.loa.istc.cnr.it/literaryObs#ResemblanceObs">
+        <rdfs:subClassOf rdf:resource="https://www.loa.istc.cnr.it/obs#BasicObs"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.loa.istc.cnr.it/literaryObs#hasResemblant"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.loa.istc.cnr.it/literaryObs#hasResembled"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.loa.istc.cnr.it/obs#hasArgument"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#bcn -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryObs#bcn">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#Text"/>
+        <rdfs:label>Boccaccio e la codificazione della novella, by Michelangelo Picone</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#bmd -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryObs#bmd">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#Text"/>
+        <rdfs:label>Boccaccio Medievale, by Vittore Branca</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#fresne -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryObs#fresne">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/literaryObs#Figure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#griselda -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryObs#griselda">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/literaryObs#Figure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#hag -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryObs#hag">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#Text"/>
+        <rdfs:label>A collection of hagiographic texts</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#mary -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryObs#mary">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/literaryObs#Figure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#obs-o1 -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o1">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/literaryObs#PatientObs"/>
+        <obs:hasArgument rdf:resource="https://www.loa.istc.cnr.it/literaryObs#griselda"/>
+        <rdfs:label>Griselda is observed as being patient</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#obs-o10 -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o10">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#AssertObs"/>
+        <obs:hasObs rdf:resource="https://www.loa.istc.cnr.it/literaryObs#obs-o9"/>
+        <obs:hasSource rdf:resource="https://www.loa.istc.cnr.it/literaryObs#bmd"/>
+        <rdfs:comment>Assertion of obs-o9 by bmd</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#obs-o11 -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o11">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#KBAssertObs"/>
+        <obs:hasObs rdf:resource="https://www.loa.istc.cnr.it/literaryObs#obs-o10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#obs-o12 -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o12">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#Observation"/>
+        <obs:hasProperPart rdf:resource="https://www.loa.istc.cnr.it/literaryObs#obs-o2"/>
+        <obs:hasProperPart rdf:resource="https://www.loa.istc.cnr.it/literaryObs#obs-o6"/>
+        <rdfs:comment>Compound observation for the premises supporting Branca&apos;s thesis relative to the resemblance between the two figures of Griselda and Mary</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#obs-o13 -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o13">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#SupportObs"/>
+        <obs:hasSupportedObs rdf:resource="https://www.loa.istc.cnr.it/literaryObs#obs-o9"/>
+        <obs:hasSupportingObs rdf:resource="https://www.loa.istc.cnr.it/literaryObs#obs-o12"/>
+        <rdfs:comment>Observation for the support of obs-09</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#obs-o14 -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o14">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#AssertObs"/>
+        <obs:hasObs rdf:resource="https://www.loa.istc.cnr.it/literaryObs#obs-o13"/>
+        <obs:hasSource rdf:resource="https://www.loa.istc.cnr.it/literaryObs#bmd"/>
+        <rdfs:comment>Assertion of obs-o13 by bmd</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#obs-o15 -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o15">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#KBAssertObs"/>
+        <obs:hasObs rdf:resource="https://www.loa.istc.cnr.it/literaryObs#obs-o14"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#obs-o16 -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o16">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#RejectObs"/>
+        <obs:hasObs rdf:resource="https://www.loa.istc.cnr.it/literaryObs#obs-o9"/>
+        <obs:hasSource rdf:resource="https://www.loa.istc.cnr.it/literaryObs#bcn"/>
+        <rdfs:comment>Rejection of obs-o9 by bcn</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#obs-o17 -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o17">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#KBAssertObs"/>
+        <obs:hasObs rdf:resource="https://www.loa.istc.cnr.it/literaryObs#obs-o16"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#obs-o18 -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o18">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/literaryObs#ResemblanceObs"/>
+        <hasResemblant rdf:resource="https://www.loa.istc.cnr.it/literaryObs#griselda"/>
+        <hasResembled rdf:resource="https://www.loa.istc.cnr.it/literaryObs#fresne"/>
+        <rdfs:comment>Observation of resemblance between griselda and fresne</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#obs-o19 -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o19">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#AssertObs"/>
+        <obs:hasObs rdf:resource="https://www.loa.istc.cnr.it/literaryObs#obs-o18"/>
+        <obs:hasSource rdf:resource="https://www.loa.istc.cnr.it/literaryObs#bcn"/>
+        <rdfs:comment>Assertion of obs-o18 by bcn</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#obs-o2 -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o2">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#AssertObs"/>
+        <obs:hasObs rdf:resource="https://www.loa.istc.cnr.it/literaryObs#obs-o1"/>
+        <obs:hasSource rdf:resource="https://www.loa.istc.cnr.it/literaryObs#tlx"/>
+        <rdfs:label>Assertion by tlx of obs-o1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#obs-o20 -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o20">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#KBAssertObs"/>
+        <obs:hasObs rdf:resource="https://www.loa.istc.cnr.it/literaryObs#obs-o19"/>
+        <rdfs:comment>KB asserts obs-o19</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#obs-o21 -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o21">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#DefeatObs"/>
+        <obs:hasDefeatedObs rdf:resource="https://www.loa.istc.cnr.it/literaryObs#obs-o9"/>
+        <obs:hasDefeatingObs rdf:resource="https://www.loa.istc.cnr.it/literaryObs#obs-o18"/>
+        <rdfs:comment>The resemblance between Griselda/Fresne defeats the resemblance between Griselda/Mary</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#obs-o22 -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o22">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#AssertObs"/>
+        <obs:hasObs rdf:resource="https://www.loa.istc.cnr.it/literaryObs#obs-o21"/>
+        <obs:hasSource rdf:resource="https://www.loa.istc.cnr.it/literaryObs#bcn"/>
+        <rdfs:comment>Assertion of obs-o21 by bcn</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#obs-o23 -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o23">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#KBAssertObs"/>
+        <obs:hasObs rdf:resource="https://www.loa.istc.cnr.it/literaryObs#obs-o22"/>
+        <rdfs:comment>Assertion of obs-o22 by kb</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#obs-o3 -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o3">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#AssertObs"/>
+        <obs:hasObs rdf:resource="https://www.loa.istc.cnr.it/literaryObs#obs-o2"/>
+        <obs:hasSource rdf:resource="https://www.loa.istc.cnr.it/literaryObs#bmd"/>
+        <rdfs:comment>Assertion by bmd of obs-o2</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#obs-o4 -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o4">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#KBAssertObs"/>
+        <obs:hasObs rdf:resource="https://www.loa.istc.cnr.it/literaryObs#obs-o3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#obs-o5 -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o5">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/literaryObs#PatientObs"/>
+        <obs:hasArgument rdf:resource="https://www.loa.istc.cnr.it/literaryObs#mary"/>
+        <rdfs:comment>Virgin Mary is observed as being patient</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#obs-o6 -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o6">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#AssertObs"/>
+        <obs:hasObs rdf:resource="https://www.loa.istc.cnr.it/literaryObs#obs-o5"/>
+        <obs:hasSource rdf:resource="https://www.loa.istc.cnr.it/literaryObs#hag"/>
+        <rdfs:comment>Assertion of obs-05 by hag</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#obs-o7 -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o7">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#AssertObs"/>
+        <obs:hasObs rdf:resource="https://www.loa.istc.cnr.it/literaryObs#obs-o6"/>
+        <obs:hasSource rdf:resource="https://www.loa.istc.cnr.it/literaryObs#bmd"/>
+        <rdfs:comment>Assertion of obs-o6 by bmd</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#obs-o8 -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o8">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#KBAssertObs"/>
+        <obs:hasObs rdf:resource="https://www.loa.istc.cnr.it/literaryObs#obs-o7"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#obs-o9 -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o9">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/literaryObs#ResemblanceObs"/>
+        <hasResemblant rdf:resource="https://www.loa.istc.cnr.it/literaryObs#griselda"/>
+        <hasResembled rdf:resource="https://www.loa.istc.cnr.it/literaryObs#mary"/>
+        <rdfs:comment>Griselda and Mary are observed as resembling</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#tlx -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryObs#tlx">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#Text"/>
+        <rdfs:label>Decameron’s tale X,10 by Boccaccio</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://www.loa.istc.cnr.it/literaryObs#Figure"/>
+            <rdf:Description rdf:about="https://www.loa.istc.cnr.it/obs#Observation"/>
+            <rdf:Description rdf:about="https://www.loa.istc.cnr.it/obs#Text"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://www.loa.istc.cnr.it/literaryObs#bcn"/>
+            <rdf:Description rdf:about="https://www.loa.istc.cnr.it/literaryObs#bmd"/>
+            <rdf:Description rdf:about="https://www.loa.istc.cnr.it/literaryObs#hag"/>
+            <rdf:Description rdf:about="https://www.loa.istc.cnr.it/literaryObs#tlx"/>
+            <rdf:Description rdf:about="https://www.loa.istc.cnr.it/obs#KB"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://www.loa.istc.cnr.it/literaryObs#fresne"/>
+            <rdf:Description rdf:about="https://www.loa.istc.cnr.it/literaryObs#griselda"/>
+            <rdf:Description rdf:about="https://www.loa.istc.cnr.it/literaryObs#mary"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o1"/>
+            <rdf:Description rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o10"/>
+            <rdf:Description rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o11"/>
+            <rdf:Description rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o12"/>
+            <rdf:Description rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o13"/>
+            <rdf:Description rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o14"/>
+            <rdf:Description rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o15"/>
+            <rdf:Description rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o16"/>
+            <rdf:Description rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o17"/>
+            <rdf:Description rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o18"/>
+            <rdf:Description rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o19"/>
+            <rdf:Description rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o2"/>
+            <rdf:Description rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o20"/>
+            <rdf:Description rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o21"/>
+            <rdf:Description rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o22"/>
+            <rdf:Description rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o23"/>
+            <rdf:Description rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o3"/>
+            <rdf:Description rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o4"/>
+            <rdf:Description rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o5"/>
+            <rdf:Description rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o6"/>
+            <rdf:Description rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o7"/>
+            <rdf:Description rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o8"/>
+            <rdf:Description rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o9"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
