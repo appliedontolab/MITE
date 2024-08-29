@@ -116,9 +116,9 @@
     
 
 
-    <!-- https://www.loa.istc.cnr.it/obs#hasSource -->
+    <!-- https://www.loa.istc.cnr.it/obs#hasSrc -->
 
-    <owl:ObjectProperty rdf:about="https://www.loa.istc.cnr.it/obs#hasSource">
+    <owl:ObjectProperty rdf:about="https://www.loa.istc.cnr.it/obs#hasSrc">
         <rdfs:subPropertyOf rdf:resource="https://www.loa.istc.cnr.it/obs#hasArgument"/>
         <rdfs:domain rdf:resource="https://www.loa.istc.cnr.it/obs#SourceObs"/>
         <rdfs:range rdf:resource="https://www.loa.istc.cnr.it/obs#Text"/>
@@ -275,7 +275,7 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.loa.istc.cnr.it/obs#hasSource"/>
+                <owl:onProperty rdf:resource="https://www.loa.istc.cnr.it/obs#hasSrc"/>
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -428,7 +428,7 @@
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://www.loa.istc.cnr.it/obs#AssertObs"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://www.loa.istc.cnr.it/obs#hasSource"/>
+                        <owl:onProperty rdf:resource="https://www.loa.istc.cnr.it/obs#hasSrc"/>
                         <owl:hasValue rdf:resource="https://www.loa.istc.cnr.it/obs#KB"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -465,7 +465,7 @@
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://www.loa.istc.cnr.it/obs#RejectObs"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://www.loa.istc.cnr.it/obs#hasSource"/>
+                        <owl:onProperty rdf:resource="https://www.loa.istc.cnr.it/obs#hasSrc"/>
                         <owl:hasValue rdf:resource="https://www.loa.istc.cnr.it/obs#KB"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -543,7 +543,7 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.loa.istc.cnr.it/obs#hasSource"/>
+                <owl:onProperty rdf:resource="https://www.loa.istc.cnr.it/obs#hasSrc"/>
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -740,7 +740,7 @@
                                 <rdf:first>
                                     <rdf:Description>
                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                        <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasSource"/>
+                                        <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasSrc"/>
                                         <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
                                         <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
                                     </rdf:Description>
@@ -751,9 +751,9 @@
                                         <rdf:first>
                                             <rdf:Description>
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasSource"/>
-                                                <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
-                                                <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
+                                                <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasObs"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl:var#o"/>
                                             </rdf:Description>
                                         </rdf:first>
                                         <rdf:rest>
@@ -761,10 +761,9 @@
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                 <rdf:first>
                                                     <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                        <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasObs"/>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#RejectObs"/>
                                                         <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
-                                                        <swrl:argument2 rdf:resource="urn:swrl:var#o"/>
                                                     </rdf:Description>
                                                 </rdf:first>
                                                 <rdf:rest>
@@ -773,8 +772,8 @@
                                                         <rdf:first>
                                                             <rdf:Description>
                                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                                                <swrl:classPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#RejectObs"/>
-                                                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                                                <swrl:classPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#AssertObs"/>
+                                                                <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
                                                             </rdf:Description>
                                                         </rdf:first>
                                                         <rdf:rest>
@@ -782,9 +781,10 @@
                                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                                 <rdf:first>
                                                                     <rdf:Description>
-                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                                                        <swrl:classPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#AssertObs"/>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasSrc"/>
                                                                         <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
+                                                                        <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
                                                                     </rdf:Description>
                                                                 </rdf:first>
                                                                 <rdf:rest>
@@ -1004,9 +1004,9 @@
                                         <rdf:first>
                                             <rdf:Description>
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasObs"/>
-                                                <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
-                                                <swrl:argument2 rdf:resource="urn:swrl:var#o"/>
+                                                <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasSrc"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl:var#y"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
                                             </rdf:Description>
                                         </rdf:first>
                                         <rdf:rest>
@@ -1015,9 +1015,9 @@
                                                 <rdf:first>
                                                     <rdf:Description>
                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                        <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasSource"/>
-                                                        <swrl:argument1 rdf:resource="urn:swrl:var#y"/>
-                                                        <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
+                                                        <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasObs"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                                                        <swrl:argument2 rdf:resource="urn:swrl:var#o"/>
                                                     </rdf:Description>
                                                 </rdf:first>
                                                 <rdf:rest>
@@ -1026,7 +1026,7 @@
                                                         <rdf:first>
                                                             <rdf:Description>
                                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasSource"/>
+                                                                <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasSrc"/>
                                                                 <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
                                                                 <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
                                                             </rdf:Description>
@@ -1519,9 +1519,9 @@
                                 <rdf:first>
                                     <rdf:Description>
                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                        <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasObs"/>
-                                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
-                                        <swrl:argument2 rdf:resource="urn:swrl:var#o"/>
+                                        <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasSrc"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#y"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
                                     </rdf:Description>
                                 </rdf:first>
                                 <rdf:rest>
@@ -1529,9 +1529,10 @@
                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                         <rdf:first>
                                             <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                                <swrl:classPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#RejectObs"/>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasObs"/>
                                                 <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl:var#o"/>
                                             </rdf:Description>
                                         </rdf:first>
                                         <rdf:rest>
@@ -1540,8 +1541,8 @@
                                                 <rdf:first>
                                                     <rdf:Description>
                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                        <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasSource"/>
-                                                        <swrl:argument1 rdf:resource="urn:swrl:var#y"/>
+                                                        <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasSrc"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
                                                         <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
                                                     </rdf:Description>
                                                 </rdf:first>
@@ -1550,10 +1551,9 @@
                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                         <rdf:first>
                                                             <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasSource"/>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                <swrl:classPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#RejectObs"/>
                                                                 <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
-                                                                <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
                                                             </rdf:Description>
                                                         </rdf:first>
                                                         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -1783,9 +1783,9 @@
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasObs"/>
+                        <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasSrc"/>
                         <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
-                        <swrl:argument2 rdf:resource="urn:swrl:var#o"/>
+                        <swrl:argument2 rdf:resource="https://www.loa.istc.cnr.it/obs#KB"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -1794,9 +1794,9 @@
                         <rdf:first>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasObs"/>
+                                <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasSrc"/>
                                 <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
-                                <swrl:argument2 rdf:resource="urn:swrl:var#o"/>
+                                <swrl:argument2 rdf:resource="https://www.loa.istc.cnr.it/obs#KB"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -1805,9 +1805,9 @@
                                 <rdf:first>
                                     <rdf:Description>
                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                        <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasSource"/>
-                                        <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
-                                        <swrl:argument2 rdf:resource="https://www.loa.istc.cnr.it/obs#KB"/>
+                                        <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasObs"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#o"/>
                                     </rdf:Description>
                                 </rdf:first>
                                 <rdf:rest>
@@ -1816,9 +1816,9 @@
                                         <rdf:first>
                                             <rdf:Description>
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasSource"/>
-                                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
-                                                <swrl:argument2 rdf:resource="https://www.loa.istc.cnr.it/obs#KB"/>
+                                                <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasObs"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl:var#o"/>
                                             </rdf:Description>
                                         </rdf:first>
                                         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -2011,9 +2011,10 @@
                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                 <rdf:first>
                     <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#KBAssertObs"/>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasObs"/>
                         <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#a"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -2021,9 +2022,10 @@
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                         <rdf:first>
                             <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#KBAssertObs"/>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasObs"/>
                                 <swrl:argument1 rdf:resource="urn:swrl:var#y"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#r"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -2032,9 +2034,9 @@
                                 <rdf:first>
                                     <rdf:Description>
                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                        <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasObs"/>
-                                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
-                                        <swrl:argument2 rdf:resource="urn:swrl:var#a"/>
+                                        <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasSrc"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
                                     </rdf:Description>
                                 </rdf:first>
                                 <rdf:rest>
@@ -2044,8 +2046,8 @@
                                             <rdf:Description>
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                                                 <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasObs"/>
-                                                <swrl:argument1 rdf:resource="urn:swrl:var#y"/>
-                                                <swrl:argument2 rdf:resource="urn:swrl:var#r"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl:var#o"/>
                                             </rdf:Description>
                                         </rdf:first>
                                         <rdf:rest>
@@ -2054,8 +2056,8 @@
                                                 <rdf:first>
                                                     <rdf:Description>
                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                                        <swrl:classPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#AssertObs"/>
-                                                        <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
+                                                        <swrl:classPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#RejectObs"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
                                                     </rdf:Description>
                                                 </rdf:first>
                                                 <rdf:rest>
@@ -2064,8 +2066,8 @@
                                                         <rdf:first>
                                                             <rdf:Description>
                                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                                                <swrl:classPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#RejectObs"/>
-                                                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                                                <swrl:classPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#AssertObs"/>
+                                                                <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
                                                             </rdf:Description>
                                                         </rdf:first>
                                                         <rdf:rest>
@@ -2073,10 +2075,9 @@
                                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                                 <rdf:first>
                                                                     <rdf:Description>
-                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                        <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasSource"/>
-                                                                        <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
-                                                                        <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                        <swrl:classPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#KBAssertObs"/>
+                                                                        <swrl:argument1 rdf:resource="urn:swrl:var#y"/>
                                                                     </rdf:Description>
                                                                 </rdf:first>
                                                                 <rdf:rest>
@@ -2084,10 +2085,9 @@
                                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                                         <rdf:first>
                                                                             <rdf:Description>
-                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                                <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasSource"/>
-                                                                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
-                                                                                <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                                <swrl:classPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#KBAssertObs"/>
+                                                                                <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
                                                                             </rdf:Description>
                                                                         </rdf:first>
                                                                         <rdf:rest>
@@ -2096,9 +2096,9 @@
                                                                                 <rdf:first>
                                                                                     <rdf:Description>
                                                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                                        <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasObs"/>
+                                                                                        <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasSrc"/>
                                                                                         <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
-                                                                                        <swrl:argument2 rdf:resource="urn:swrl:var#o"/>
+                                                                                        <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
                                                                                     </rdf:Description>
                                                                                 </rdf:first>
                                                                                 <rdf:rest>
@@ -2108,7 +2108,7 @@
                                                                                             <rdf:Description>
                                                                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                                                                                                 <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasObs"/>
-                                                                                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                                                                                <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
                                                                                                 <swrl:argument2 rdf:resource="urn:swrl:var#o"/>
                                                                                             </rdf:Description>
                                                                                         </rdf:first>
