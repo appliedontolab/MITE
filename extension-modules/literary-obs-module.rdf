@@ -15,22 +15,6 @@
         <owl:versionInfo>STATUS: testing</owl:versionInfo>
     </owl:Ontology>
     
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- https://www.loa.istc.cnr.it/obs#hasSource -->
-
-    <owl:AnnotationProperty rdf:about="https://www.loa.istc.cnr.it/obs#hasSource"/>
     
 
 
@@ -204,8 +188,8 @@
     <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o10">
         <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#AssertObs"/>
         <obs:hasObs rdf:resource="https://www.loa.istc.cnr.it/literaryObs#obs-o9"/>
+        <obs:hasSrc rdf:resource="https://www.loa.istc.cnr.it/literaryObs#bmd"/>
         <rdfs:comment>Assertion of obs-o9 by bmd</rdfs:comment>
-        <obs:hasSource rdf:resource="https://www.loa.istc.cnr.it/literaryObs#bmd"/>
     </owl:NamedIndividual>
     
 
@@ -246,8 +230,8 @@
     <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o14">
         <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#AssertObs"/>
         <obs:hasObs rdf:resource="https://www.loa.istc.cnr.it/literaryObs#obs-o13"/>
+        <obs:hasSrc rdf:resource="https://www.loa.istc.cnr.it/literaryObs#bmd"/>
         <rdfs:comment>Assertion of obs-o13 by bmd</rdfs:comment>
-        <obs:hasSource rdf:resource="https://www.loa.istc.cnr.it/literaryObs#bmd"/>
     </owl:NamedIndividual>
     
 
@@ -266,8 +250,8 @@
     <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o16">
         <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#RejectObs"/>
         <obs:hasObs rdf:resource="https://www.loa.istc.cnr.it/literaryObs#obs-o9"/>
+        <obs:hasSrc rdf:resource="https://www.loa.istc.cnr.it/literaryObs#bcn"/>
         <rdfs:comment>Rejection of obs-o9 by bcn</rdfs:comment>
-        <obs:hasSource rdf:resource="https://www.loa.istc.cnr.it/literaryObs#bcn"/>
     </owl:NamedIndividual>
     
 
@@ -297,8 +281,8 @@
     <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o19">
         <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#AssertObs"/>
         <obs:hasObs rdf:resource="https://www.loa.istc.cnr.it/literaryObs#obs-o18"/>
+        <obs:hasSrc rdf:resource="https://www.loa.istc.cnr.it/literaryObs#bcn"/>
         <rdfs:comment>Assertion of obs-o18 by bcn</rdfs:comment>
-        <obs:hasSource rdf:resource="https://www.loa.istc.cnr.it/literaryObs#bcn"/>
     </owl:NamedIndividual>
     
 
@@ -308,8 +292,8 @@
     <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o2">
         <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#AssertObs"/>
         <obs:hasObs rdf:resource="https://www.loa.istc.cnr.it/literaryObs#obs-o1"/>
+        <obs:hasSrc rdf:resource="https://www.loa.istc.cnr.it/literaryObs#tlx"/>
         <rdfs:label>Assertion by tlx of obs-o1</rdfs:label>
-        <obs:hasSource rdf:resource="https://www.loa.istc.cnr.it/literaryObs#tlx"/>
     </owl:NamedIndividual>
     
 
@@ -340,8 +324,8 @@
     <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o22">
         <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#AssertObs"/>
         <obs:hasObs rdf:resource="https://www.loa.istc.cnr.it/literaryObs#obs-o21"/>
+        <obs:hasSrc rdf:resource="https://www.loa.istc.cnr.it/literaryObs#bcn"/>
         <rdfs:comment>Assertion of obs-o21 by bcn</rdfs:comment>
-        <obs:hasSource rdf:resource="https://www.loa.istc.cnr.it/literaryObs#bcn"/>
     </owl:NamedIndividual>
     
 
@@ -361,8 +345,8 @@
     <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o3">
         <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#AssertObs"/>
         <obs:hasObs rdf:resource="https://www.loa.istc.cnr.it/literaryObs#obs-o2"/>
+        <obs:hasSrc rdf:resource="https://www.loa.istc.cnr.it/literaryObs#bmd"/>
         <rdfs:comment>Assertion by bmd of obs-o2</rdfs:comment>
-        <obs:hasSource rdf:resource="https://www.loa.istc.cnr.it/literaryObs#bmd"/>
     </owl:NamedIndividual>
     
 
@@ -391,8 +375,8 @@
     <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o6">
         <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#AssertObs"/>
         <obs:hasObs rdf:resource="https://www.loa.istc.cnr.it/literaryObs#obs-o5"/>
+        <obs:hasSrc rdf:resource="https://www.loa.istc.cnr.it/literaryObs#hag"/>
         <rdfs:comment>Assertion of obs-05 by hag</rdfs:comment>
-        <obs:hasSource rdf:resource="https://www.loa.istc.cnr.it/literaryObs#hag"/>
     </owl:NamedIndividual>
     
 
@@ -402,8 +386,8 @@
     <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryObs#obs-o7">
         <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#AssertObs"/>
         <obs:hasObs rdf:resource="https://www.loa.istc.cnr.it/literaryObs#obs-o6"/>
+        <obs:hasSrc rdf:resource="https://www.loa.istc.cnr.it/literaryObs#bmd"/>
         <rdfs:comment>Assertion of obs-o6 by bmd</rdfs:comment>
-        <obs:hasSource rdf:resource="https://www.loa.istc.cnr.it/literaryObs#bmd"/>
     </owl:NamedIndividual>
     
 
