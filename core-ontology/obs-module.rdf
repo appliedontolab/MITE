@@ -249,6 +249,8 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://www.loa.istc.cnr.it/obs#BasicObs"/>
+        <owl:disjointWith rdf:resource="https://www.loa.istc.cnr.it/obs#SourceObs"/>
         <rdfs:comment>An argumentation observation supports or defeats another observation.</rdfs:comment>
         <rdfs:label>Argumentation Observation</rdfs:label>
     </owl:Class>
@@ -277,9 +279,7 @@
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="https://www.loa.istc.cnr.it/obs#DefeatObs"/>
         <owl:disjointWith rdf:resource="https://www.loa.istc.cnr.it/obs#RejectObs"/>
-        <owl:disjointWith rdf:resource="https://www.loa.istc.cnr.it/obs#SupportObs"/>
         <rdfs:label>Assert Observation</rdfs:label>
     </owl:Class>
     
@@ -354,6 +354,7 @@
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://www.loa.istc.cnr.it/obs#SourceObs"/>
         <rdfs:comment>A basic observation is an observation that concerns entities (has arguments) that are not observations</rdfs:comment>
         <rdfs:label>Basic Observation</rdfs:label>
     </owl:Class>
@@ -392,7 +393,6 @@
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="https://www.loa.istc.cnr.it/obs#RejectObs"/>
         <owl:disjointWith rdf:resource="https://www.loa.istc.cnr.it/obs#SupportObs"/>
         <rdfs:label>Defeat Observation</rdfs:label>
     </owl:Class>
@@ -403,8 +403,8 @@
 
     <owl:Class rdf:about="https://www.loa.istc.cnr.it/obs#DisputableObs">
         <rdfs:subClassOf rdf:resource="https://www.loa.istc.cnr.it/obs#Observation"/>
-        <rdfs:comment>Instances of this class are automatically inferred reasoning over a dedicated SWRL rule</rdfs:comment>
         <rdfs:comment>A disputable observation is an observation that is asserted and rejected.</rdfs:comment>
+        <rdfs:comment>Instances of this class are automatically inferred reasoning over a dedicated SWRL rule</rdfs:comment>
         <rdfs:label>Disputable Observation</rdfs:label>
     </owl:Class>
     
@@ -547,7 +547,6 @@
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="https://www.loa.istc.cnr.it/obs#SupportObs"/>
         <rdfs:label>Reject Observation</rdfs:label>
     </owl:Class>
     
