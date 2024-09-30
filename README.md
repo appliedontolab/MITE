@@ -1,6 +1,5 @@
 # MITE
-This repository is relative to the research project **MITE - Make it explicit: Documenting interpretations of literary fictions with conceptual formal models** (2023-2025) funded by the European Union -- Next Generation EU. 
-
+This repository is relative to the research project **MITE - Make it explicit: Documenting interpretations of literary fictions with conceptual formal models** (2023-2025) funded by the European Union – Next Generation EU, Mission 4, Component 1, CUP B53D2302883000
 Visit the **Website** of the project at: https://www.loa.istc.cnr.it/mite/
 
 Content of the repository:
@@ -9,7 +8,7 @@ Content of the repository:
 
 #### Research related to the ontology:
 
-* Emilio M. Sanfilippo, Claudio Masolo, Alessandro Mosca, and Gaia Tomazzoli. *Operationalizing Scholarly Observations in OWL*. Under review
+* Emilio M. Sanfilippo, Claudio Masolo, Alessandro Mosca, and Gaia Tomazzoli. *Operationalizing Scholarly Observations in OWL*. 4th International Workshop on Semantic Web and Ontology Design for Cultural Heritage (SWODCH), 30-31 October 2024, Tours, France (to appear)
 
 * Emilio M. Sanfilippo, Claudio Masolo, Emanuele Bottazzi and Roberta Ferrario, *Interpreting Texts and Their Characters*. Formal Ontology in Information Systems. Proceedings of the 13th International Conference (FOIS 2024), Amsterdam. (in press)
   
