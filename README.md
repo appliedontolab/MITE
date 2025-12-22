@@ -4,7 +4,8 @@ Visit the **Website** of the project at: https://www.loa.istc.cnr.it/mite/
 
 Content of the repository:
 * **core-ontology**: it contains the core module of the ontology. The core has to be imported in all other modules for application extensions.
-* **extension-modules**: it contains all modules extending the core module. The first, testing, module is the literary-obs-module for representing observations in literary studies.
+* **extension-modules**: it contains modules extending the core module. The first, testing, module is the literary-module for representing observations in literary studies.
+* **case-study**: a case study based on the ontology. It imports the literary-module. 
 
 #### Research related to the ontology:
 
