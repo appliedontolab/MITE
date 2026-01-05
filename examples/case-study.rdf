@@ -1,0 +1,340 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://www.loa.istc.cnr.it/literaryOb/cs"
+     xml:base="https://www.loa.istc.cnr.it/literaryOb/cs"
+     xmlns:obs="https://www.loa.istc.cnr.it/obs#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#">
+    <owl:Ontology rdf:about="https://www.loa.istc.cnr.it/literaryOb/cs">
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/appliedontolab/MITE/refs/heads/main/extension-modules/literary-module.rdf"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryOb/cs#ass_1 -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryOb/cs#ass_1">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#AssertObs"/>
+        <obs:hasObservation rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#basic_obs_1"/>
+        <obs:hasSource rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#text_lyrics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryOb/cs#ass_2 -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryOb/cs#ass_2">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#AssertObs"/>
+        <obs:hasObservation rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#basic_obs_1"/>
+        <obs:hasSource rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#text_comedy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryOb/cs#basic_obs_1 -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryOb/cs#basic_obs_1">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/literaryObs#FemaleObs"/>
+        <obs:hasArgument rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#beatrice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryOb/cs#basic_obs_2 -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryOb/cs#basic_obs_2">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/literaryObs#EroticObs"/>
+        <obs:hasArgument rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#beatrice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryOb/cs#basic_obs_3 -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryOb/cs#basic_obs_3">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/literaryObs#IdealObs"/>
+        <obs:hasArgument rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#beatrice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryOb/cs#basic_obs_4 -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryOb/cs#basic_obs_4">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/literaryObs#TalkativeAgencyObs"/>
+        <obs:hasArgument rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#beatrice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryOb/cs#basic_obs_5 -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryOb/cs#basic_obs_5">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/literaryObs#ActiveAgencyObs"/>
+        <obs:hasArgument rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#beatrice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryOb/cs#basic_obs_6 -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryOb/cs#basic_obs_6">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/literaryObs#AuthoritativeAgencyObs"/>
+        <obs:hasArgument rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#beatrice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryOb/cs#beatrice -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryOb/cs#beatrice"/>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryOb/cs#int_ass_10 -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryOb/cs#int_ass_10">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#IntAssertObs"/>
+        <obs:hasInterpretedText rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#text_comedy"/>
+        <obs:hasObservation rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#basic_obs_6"/>
+        <obs:hasSource rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#text_barolini"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryOb/cs#int_ass_10_report -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryOb/cs#int_ass_10_report">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#IntAssertObs"/>
+        <obs:hasInterpretedText rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#text_barolini"/>
+        <obs:hasObservation rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#int_ass_10"/>
+        <obs:hasSourceReport rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#report_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryOb/cs#int_ass_1_report -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryOb/cs#int_ass_1_report">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#IntAssertObs"/>
+        <obs:hasInterpretedText rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#text_barolini"/>
+        <obs:hasObservation rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#ass_1"/>
+        <obs:hasSourceReport rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#report_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryOb/cs#int_ass_2 -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryOb/cs#int_ass_2">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#IntAssertObs"/>
+        <obs:hasInterpretedText rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#text_lyrics"/>
+        <obs:hasObservation rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#basic_obs_2"/>
+        <obs:hasSource rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#text_barolini"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryOb/cs#int_ass_2_report -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryOb/cs#int_ass_2_report">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#IntAssertObs"/>
+        <obs:hasInterpretedText rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#text_barolini"/>
+        <obs:hasObservation rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#int_ass_2"/>
+        <obs:hasSourceReport rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#report_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryOb/cs#int_ass_3 -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryOb/cs#int_ass_3">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#IntAssertObs"/>
+        <obs:hasInterpretedText rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#text_lyrics"/>
+        <obs:hasObservation rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#basic_obs_3"/>
+        <obs:hasSource rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#text_barolini"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryOb/cs#int_ass_3_report -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryOb/cs#int_ass_3_report">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#IntAssertObs"/>
+        <obs:hasInterpretedText rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#text_barolini"/>
+        <obs:hasObservation rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#int_ass_3"/>
+        <obs:hasSourceReport rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#report_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryOb/cs#int_ass_4_report -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryOb/cs#int_ass_4_report">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#IntAssertObs"/>
+        <obs:hasInterpretedText rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#text_barolini"/>
+        <obs:hasObservation rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#int_dny_4"/>
+        <obs:hasSourceReport rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#report_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryOb/cs#int_ass_5_report -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryOb/cs#int_ass_5_report">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#IntAssertObs"/>
+        <obs:hasInterpretedText rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#text_barolini"/>
+        <obs:hasObservation rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#int_dny_5"/>
+        <obs:hasSourceReport rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#report_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryOb/cs#int_ass_6_report -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryOb/cs#int_ass_6_report">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#IntAssertObs"/>
+        <obs:hasInterpretedText rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#text_barolini"/>
+        <obs:hasObservation rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#ass_2"/>
+        <obs:hasSourceReport rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#report_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryOb/cs#int_ass_7 -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryOb/cs#int_ass_7">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#IntAssertObs"/>
+        <obs:hasInterpretedText rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#text_comedy"/>
+        <obs:hasObservation rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#basic_obs_2"/>
+        <obs:hasSource rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#text_barolini"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryOb/cs#int_ass_7_report -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryOb/cs#int_ass_7_report">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#IntAssertObs"/>
+        <obs:hasInterpretedText rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#text_barolini"/>
+        <obs:hasObservation rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#int_ass_7"/>
+        <obs:hasSourceReport rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#report_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryOb/cs#int_ass_8 -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryOb/cs#int_ass_8">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#IntAssertObs"/>
+        <obs:hasInterpretedText rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#text_comedy"/>
+        <obs:hasObservation rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#basic_obs_4"/>
+        <obs:hasSource rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#text_barolini"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryOb/cs#int_ass_8_report -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryOb/cs#int_ass_8_report">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#IntAssertObs"/>
+        <obs:hasInterpretedText rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#text_barolini"/>
+        <obs:hasObservation rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#int_ass_8"/>
+        <obs:hasSourceReport rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#report_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryOb/cs#int_ass_9 -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryOb/cs#int_ass_9">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#IntAssertObs"/>
+        <obs:hasInterpretedText rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#text_comedy"/>
+        <obs:hasObservation rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#basic_obs_5"/>
+        <obs:hasSource rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#text_barolini"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryOb/cs#int_ass_9_report -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryOb/cs#int_ass_9_report">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#IntAssertObs"/>
+        <obs:hasInterpretedText rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#text_barolini"/>
+        <obs:hasObservation rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#int_ass_9"/>
+        <obs:hasSourceReport rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#report_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryOb/cs#int_dny_4 -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryOb/cs#int_dny_4">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#IntRejectObs"/>
+        <obs:hasInterpretedText rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#text_lyrics"/>
+        <obs:hasObservation rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#basic_obs_4"/>
+        <obs:hasSource rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#text_barolini"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryOb/cs#int_dny_5 -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryOb/cs#int_dny_5">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#IntRejectObs"/>
+        <obs:hasInterpretedText rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#text_lyrics"/>
+        <obs:hasObservation rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#basic_obs_5"/>
+        <obs:hasSource rdf:resource="https://www.loa.istc.cnr.it/literaryOb/cs#text_barolini"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryOb/cs#report_1 -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryOb/cs#report_1">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#Report"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryOb/cs#text_barolini -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryOb/cs#text_barolini">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#CriticText"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryOb/cs#text_comedy -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryOb/cs#text_comedy">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#LiteraryText"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryOb/cs#text_lyrics -->
+
+    <owl:NamedIndividual rdf:about="https://www.loa.istc.cnr.it/literaryOb/cs#text_lyrics">
+        <rdf:type rdf:resource="https://www.loa.istc.cnr.it/obs#LiteraryText"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
