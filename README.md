@@ -9,7 +9,7 @@ Content of the repository:
 
 #### Research related to the ontology:
 
-*Claudio Masolo, Emilio M. Sanfilippo, Emanuele Bottazzi, Roberta Ferrario, Alessandro Mosca, Marta M. Vilardo. _An Observational Approach to Representing Interpretation_. Applied Ontology. 2025;0(0). doi:10.1177/15705838251391711
+* Claudio Masolo, Emilio M. Sanfilippo, Emanuele Bottazzi, Roberta Ferrario, Alessandro Mosca, Marta M. Vilardo. _An Observational Approach to Representing Interpretation_. Applied Ontology. 2025;0(0). doi:10.1177/15705838251391711
 
 * Emilio M. Sanfilippo, Claudio Masolo, Alessandro Mosca, and Gaia Tomazzoli. _Operationalizing Scholarly Observations in OWL_. Proceedings of the 4th International Workshop on Semantic Web and Ontology Design for Cultural Heritage (SWODCH 2024), CEUR vol. 3809.
 
