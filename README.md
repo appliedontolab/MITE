@@ -4,13 +4,13 @@ Visit the **Website** of the project at: https://www.loa.istc.cnr.it/mite/
 
 Content of the repository:
 * **core-ontology**: it contains the core module of the ontology. The core has to be imported in all other modules for application extensions.
-* **extension-modules**: it contains modules extending the core module. The first, testing, module is the literary-module for representing observations in literary studies.
-* **case-study**: a case study based on the ontology. It imports the literary-module. 
+* **case-study**: a preliminary case study based on the ontology. It imports and extends the core-ontology. 
 
 #### Research related to the ontology:
 
 * Emilio M. Sanfilippo, Claudio Masolo, Alessandro Mosca, and Gaia Tomazzoli. _Modeling and Reasoning over Observations:
-An Ontology for Literary Criticism_. Annual Conference of Computational Literary Studies (CCLS 2026). **TO APPEAR**
+An Ontology for Literary Criticism_. Annual Conference of Computational Literary Studies (CCLS 2026). **Conference version**
+[https://doi.org/10.26083/tuda-7993](https://doi.org/10.26083/tuda-7993)
 
 * Claudio Masolo, Emilio M. Sanfilippo, Emanuele Bottazzi, Roberta Ferrario, Alessandro Mosca, Marta M. Vilardo. _An Observational Approach to Representing Interpretation_. Applied Ontology. 2025;20(4) 
 [https://doi.org/10.1177/15705838251391711](https://doi.org/10.1177/15705838251391711)
