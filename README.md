@@ -3,8 +3,8 @@ This repository is relative to the research project **MITE - Make it explicit: D
 Visit the **Website** of the project at: https://www.loa.istc.cnr.it/mite/
 
 Content of the repository:
-* **core-ontology**: it contains the core module of the ontology. The core has to be imported in all other modules for application extensions.
-* **case-study**: a preliminary case study based on the ontology. It imports and extends the core-ontology. 
+* **core-ontology**: it contains the core module of the ontology. The core has to be always imported and extended for applications.
+* **archive**: it contains various materials. The subfolder CCLS2026 contains files presented at the CCLS 2026 conference (see paper below)
 
 #### Research related to the ontology:
 
