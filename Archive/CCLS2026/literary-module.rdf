@@ -11,7 +11,7 @@
      xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
     <owl:Ontology rdf:about="https://www.loa.istc.cnr.it/literaryObs">
-        <owl:imports rdf:resource="https://raw.githubusercontent.com/appliedontolab/MITE/refs/heads/main/core-ontology/core-module.rdf"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/appliedontolab/MITE/refs/heads/main/Archive/CCLS2026/core-module.rdf"/>
         <rdfs:comment>Created by: Emilio M. Sanfilippo, Claudio Masolo, and Alessandro Mosca in the context of the research project &quot;MITE - Make it explicit: Documenting interpretations of literary fictions with conceptual formal models&quot; (2023-2025) funded by the European Union - Next Generation EU.</rdfs:comment>
     </owl:Ontology>
     
