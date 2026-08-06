@@ -1,0 +1,946 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://www.loa.istc.cnr.it/literaryObs#"
+     xml:base="https://www.loa.istc.cnr.it/literaryObs"
+     xmlns:obs="https://www.loa.istc.cnr.it/obs#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
+    <owl:Ontology rdf:about="https://www.loa.istc.cnr.it/literaryObs">
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/appliedontolab/MITE/refs/heads/main/core-ontology/core-module.rdf"/>
+        <rdfs:comment>Created by: Emilio M. Sanfilippo, Claudio Masolo, and Alessandro Mosca in the context of the research project &quot;MITE - Make it explicit: Documenting interpretations of literary fictions with conceptual formal models&quot; (2023-2025) funded by the European Union - Next Generation EU.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#characterIn -->
+
+    <owl:ObjectProperty rdf:about="https://www.loa.istc.cnr.it/literaryObs#characterIn">
+        <rdfs:domain rdf:resource="https://www.loa.istc.cnr.it/literaryObs#Character"/>
+        <rdfs:range rdf:resource="https://www.loa.istc.cnr.it/obs#Text"/>
+        <rdfs:label>character in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#courtlyLadyCharacterIn -->
+
+    <owl:ObjectProperty rdf:about="https://www.loa.istc.cnr.it/literaryObs#courtlyLadyCharacterIn">
+        <rdfs:subPropertyOf rdf:resource="https://www.loa.istc.cnr.it/literaryObs#characterIn"/>
+        <rdfs:label>courtly lady character in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#hybridPastourelleCourtlyCharacterIn -->
+
+    <owl:ObjectProperty rdf:about="https://www.loa.istc.cnr.it/literaryObs#hybridPastourelleCourtlyCharacterIn">
+        <rdfs:subPropertyOf rdf:resource="https://www.loa.istc.cnr.it/literaryObs#characterIn"/>
+        <rdfs:label>hybrid pastourelle courtly character in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#pastourelleCharacterIn -->
+
+    <owl:ObjectProperty rdf:about="https://www.loa.istc.cnr.it/literaryObs#pastourelleCharacterIn">
+        <rdfs:subPropertyOf rdf:resource="https://www.loa.istc.cnr.it/literaryObs#characterIn"/>
+        <rdfs:label>pastourelle character in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#ActiveAgencyObs -->
+
+    <owl:Class rdf:about="https://www.loa.istc.cnr.it/literaryObs#ActiveAgencyObs">
+        <rdfs:subClassOf rdf:resource="https://www.loa.istc.cnr.it/literaryObs#NarrativeAgencyObs"/>
+        <rdfs:label>Active Agency Obs</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#AffectiveObs -->
+
+    <owl:Class rdf:about="https://www.loa.istc.cnr.it/literaryObs#AffectiveObs">
+        <rdfs:subClassOf rdf:resource="https://www.loa.istc.cnr.it/obs#BasicObs"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.loa.istc.cnr.it/obs#hasArgument"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.loa.istc.cnr.it/literaryObs#Character"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Affective Obs</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#AuthoritativeAgencyObs -->
+
+    <owl:Class rdf:about="https://www.loa.istc.cnr.it/literaryObs#AuthoritativeAgencyObs">
+        <rdfs:subClassOf rdf:resource="https://www.loa.istc.cnr.it/literaryObs#NarrativeAgencyObs"/>
+        <rdfs:label>Authoritative Agency Obs</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#Character -->
+
+    <owl:Class rdf:about="https://www.loa.istc.cnr.it/literaryObs#Character">
+        <rdfs:label>Character</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#CompassionateObs -->
+
+    <owl:Class rdf:about="https://www.loa.istc.cnr.it/literaryObs#CompassionateObs">
+        <rdfs:subClassOf rdf:resource="https://www.loa.istc.cnr.it/literaryObs#AffectiveObs"/>
+        <owl:disjointWith rdf:resource="https://www.loa.istc.cnr.it/literaryObs#EroticObs"/>
+        <rdfs:label>Compassionate Obs</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#EroticObs -->
+
+    <owl:Class rdf:about="https://www.loa.istc.cnr.it/literaryObs#EroticObs">
+        <rdfs:subClassOf rdf:resource="https://www.loa.istc.cnr.it/literaryObs#AffectiveObs"/>
+        <rdfs:label>Erotic Obs</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#EthicalAgencyObs -->
+
+    <owl:Class rdf:about="https://www.loa.istc.cnr.it/literaryObs#EthicalAgencyObs">
+        <rdfs:subClassOf rdf:resource="https://www.loa.istc.cnr.it/obs#BasicObs"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.loa.istc.cnr.it/obs#hasArgument"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.loa.istc.cnr.it/literaryObs#Character"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Ethical Agency Obs</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#FemaleObs -->
+
+    <owl:Class rdf:about="https://www.loa.istc.cnr.it/literaryObs#FemaleObs">
+        <rdfs:subClassOf rdf:resource="https://www.loa.istc.cnr.it/literaryObs#GenderObs"/>
+        <rdfs:label>Female Obs</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#GenderObs -->
+
+    <owl:Class rdf:about="https://www.loa.istc.cnr.it/literaryObs#GenderObs">
+        <rdfs:subClassOf rdf:resource="https://www.loa.istc.cnr.it/obs#BasicObs"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.loa.istc.cnr.it/obs#hasArgument"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.loa.istc.cnr.it/literaryObs#Character"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Gender Obs</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#IdealObs -->
+
+    <owl:Class rdf:about="https://www.loa.istc.cnr.it/literaryObs#IdealObs">
+        <rdfs:subClassOf rdf:resource="https://www.loa.istc.cnr.it/literaryObs#SymbolicObs"/>
+        <owl:disjointWith rdf:resource="https://www.loa.istc.cnr.it/literaryObs#TheologicalObs"/>
+        <rdfs:label>Ideal Obs</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#MaleObs -->
+
+    <owl:Class rdf:about="https://www.loa.istc.cnr.it/literaryObs#MaleObs">
+        <rdfs:subClassOf rdf:resource="https://www.loa.istc.cnr.it/literaryObs#GenderObs"/>
+        <rdfs:label>Male Obs</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#NarrativeAgencyObs -->
+
+    <owl:Class rdf:about="https://www.loa.istc.cnr.it/literaryObs#NarrativeAgencyObs">
+        <rdfs:subClassOf rdf:resource="https://www.loa.istc.cnr.it/obs#BasicObs"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.loa.istc.cnr.it/obs#hasArgument"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.loa.istc.cnr.it/literaryObs#Character"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Narrative Agency Obs</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#SinfulObs -->
+
+    <owl:Class rdf:about="https://www.loa.istc.cnr.it/literaryObs#SinfulObs">
+        <rdfs:subClassOf rdf:resource="https://www.loa.istc.cnr.it/literaryObs#EthicalAgencyObs"/>
+        <owl:disjointWith rdf:resource="https://www.loa.istc.cnr.it/literaryObs#VirtuousObs"/>
+        <rdfs:label>Sinful Obs</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#SymbolicObs -->
+
+    <owl:Class rdf:about="https://www.loa.istc.cnr.it/literaryObs#SymbolicObs">
+        <rdfs:subClassOf rdf:resource="https://www.loa.istc.cnr.it/obs#BasicObs"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.loa.istc.cnr.it/obs#hasArgument"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.loa.istc.cnr.it/literaryObs#Character"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Symbolic Obs</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#TalkativeAgencyObs -->
+
+    <owl:Class rdf:about="https://www.loa.istc.cnr.it/literaryObs#TalkativeAgencyObs">
+        <rdfs:subClassOf rdf:resource="https://www.loa.istc.cnr.it/literaryObs#NarrativeAgencyObs"/>
+        <rdfs:label>Talkative Agency Obs</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#TheologicalObs -->
+
+    <owl:Class rdf:about="https://www.loa.istc.cnr.it/literaryObs#TheologicalObs">
+        <rdfs:subClassOf rdf:resource="https://www.loa.istc.cnr.it/literaryObs#SymbolicObs"/>
+        <rdfs:label>Theological Obs</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#UngenderedObs -->
+
+    <owl:Class rdf:about="https://www.loa.istc.cnr.it/literaryObs#UngenderedObs">
+        <rdfs:subClassOf rdf:resource="https://www.loa.istc.cnr.it/literaryObs#GenderObs"/>
+        <rdfs:label>Ungendered Obs</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.loa.istc.cnr.it/literaryObs#VirtuousObs -->
+
+    <owl:Class rdf:about="https://www.loa.istc.cnr.it/literaryObs#VirtuousObs">
+        <rdfs:subClassOf rdf:resource="https://www.loa.istc.cnr.it/literaryObs#EthicalAgencyObs"/>
+        <rdfs:label>Virtuous Obs</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://www.loa.istc.cnr.it/literaryObs#ActiveAgencyObs"/>
+            <rdf:Description rdf:about="https://www.loa.istc.cnr.it/literaryObs#AuthoritativeAgencyObs"/>
+            <rdf:Description rdf:about="https://www.loa.istc.cnr.it/literaryObs#TalkativeAgencyObs"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://www.loa.istc.cnr.it/literaryObs#AffectiveObs"/>
+            <rdf:Description rdf:about="https://www.loa.istc.cnr.it/literaryObs#EthicalAgencyObs"/>
+            <rdf:Description rdf:about="https://www.loa.istc.cnr.it/literaryObs#GenderObs"/>
+            <rdf:Description rdf:about="https://www.loa.istc.cnr.it/literaryObs#NarrativeAgencyObs"/>
+            <rdf:Description rdf:about="https://www.loa.istc.cnr.it/literaryObs#SymbolicObs"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://www.loa.istc.cnr.it/literaryObs#Character"/>
+            <rdf:Description rdf:about="https://www.loa.istc.cnr.it/obs#Observation"/>
+            <rdf:Description rdf:about="https://www.loa.istc.cnr.it/obs#Text"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://www.loa.istc.cnr.it/literaryObs#FemaleObs"/>
+            <rdf:Description rdf:about="https://www.loa.istc.cnr.it/literaryObs#MaleObs"/>
+            <rdf:Description rdf:about="https://www.loa.istc.cnr.it/literaryObs#UngenderedObs"/>
+        </owl:members>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="urn:swrl:var#t">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#o3">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#o2">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#o1">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#o4">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#o5">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#x">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#3">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#assertivelyClaims"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#t"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#o3"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#assertivelyClaims"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#t"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#o2"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#assertivelyClaims"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#t"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#o1"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="https://www.loa.istc.cnr.it/literaryObs#IdealObs"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl:var#o3"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#rejectivelyClaims"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl:var#t"/>
+                                                        <swrl:argument2 rdf:resource="urn:swrl:var#o4"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#rejectivelyClaims"/>
+                                                                <swrl:argument1 rdf:resource="urn:swrl:var#t"/>
+                                                                <swrl:argument2 rdf:resource="urn:swrl:var#o5"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                        <swrl:classPredicate rdf:resource="https://www.loa.istc.cnr.it/literaryObs#EroticObs"/>
+                                                                        <swrl:argument1 rdf:resource="urn:swrl:var#o2"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                                <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasArgument"/>
+                                                                                <swrl:argument1 rdf:resource="urn:swrl:var#o5"/>
+                                                                                <swrl:argument2 rdf:resource="urn:swrl:var#x"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                <rdf:first>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                                        <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasArgument"/>
+                                                                                        <swrl:argument1 rdf:resource="urn:swrl:var#o3"/>
+                                                                                        <swrl:argument2 rdf:resource="urn:swrl:var#x"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:first>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                        <rdf:first>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                                                <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasArgument"/>
+                                                                                                <swrl:argument1 rdf:resource="urn:swrl:var#o4"/>
+                                                                                                <swrl:argument2 rdf:resource="urn:swrl:var#x"/>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:first>
+                                                                                        <rdf:rest>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                <rdf:first>
+                                                                                                    <rdf:Description>
+                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                                                        <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasArgument"/>
+                                                                                                        <swrl:argument1 rdf:resource="urn:swrl:var#o1"/>
+                                                                                                        <swrl:argument2 rdf:resource="urn:swrl:var#x"/>
+                                                                                                    </rdf:Description>
+                                                                                                </rdf:first>
+                                                                                                <rdf:rest>
+                                                                                                    <rdf:Description>
+                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                        <rdf:first>
+                                                                                                            <rdf:Description>
+                                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                                                                <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasArgument"/>
+                                                                                                                <swrl:argument1 rdf:resource="urn:swrl:var#o2"/>
+                                                                                                                <swrl:argument2 rdf:resource="urn:swrl:var#x"/>
+                                                                                                            </rdf:Description>
+                                                                                                        </rdf:first>
+                                                                                                        <rdf:rest>
+                                                                                                            <rdf:Description>
+                                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                                <rdf:first>
+                                                                                                                    <rdf:Description>
+                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                                                                        <swrl:classPredicate rdf:resource="https://www.loa.istc.cnr.it/literaryObs#FemaleObs"/>
+                                                                                                                        <swrl:argument1 rdf:resource="urn:swrl:var#o1"/>
+                                                                                                                    </rdf:Description>
+                                                                                                                </rdf:first>
+                                                                                                                <rdf:rest>
+                                                                                                                    <rdf:Description>
+                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                                        <rdf:first>
+                                                                                                                            <rdf:Description>
+                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                                                                                <swrl:classPredicate rdf:resource="https://www.loa.istc.cnr.it/literaryObs#TalkativeAgencyObs"/>
+                                                                                                                                <swrl:argument1 rdf:resource="urn:swrl:var#o4"/>
+                                                                                                                            </rdf:Description>
+                                                                                                                        </rdf:first>
+                                                                                                                        <rdf:rest>
+                                                                                                                            <rdf:Description>
+                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                                                <rdf:first>
+                                                                                                                                    <rdf:Description>
+                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                                                                                        <swrl:classPredicate rdf:resource="https://www.loa.istc.cnr.it/literaryObs#ActiveAgencyObs"/>
+                                                                                                                                        <swrl:argument1 rdf:resource="urn:swrl:var#o5"/>
+                                                                                                                                    </rdf:Description>
+                                                                                                                                </rdf:first>
+                                                                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                                                            </rdf:Description>
+                                                                                                                        </rdf:rest>
+                                                                                                                    </rdf:Description>
+                                                                                                                </rdf:rest>
+                                                                                                            </rdf:Description>
+                                                                                                        </rdf:rest>
+                                                                                                    </rdf:Description>
+                                                                                                </rdf:rest>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:rest>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/literaryObs#courtlyLadyCharacterIn"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#assertivelyClaims"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#t"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#o4"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#assertivelyClaims"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#t"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#o3"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#assertivelyClaims"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#t"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#o2"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#assertivelyClaims"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl:var#t"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl:var#o1"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="https://www.loa.istc.cnr.it/literaryObs#AuthoritativeAgencyObs"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl:var#o4"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                <swrl:classPredicate rdf:resource="https://www.loa.istc.cnr.it/literaryObs#EroticObs"/>
+                                                                <swrl:argument1 rdf:resource="urn:swrl:var#o5"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasArgument"/>
+                                                                        <swrl:argument1 rdf:resource="urn:swrl:var#o5"/>
+                                                                        <swrl:argument2 rdf:resource="urn:swrl:var#x"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                                <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasArgument"/>
+                                                                                <swrl:argument1 rdf:resource="urn:swrl:var#o3"/>
+                                                                                <swrl:argument2 rdf:resource="urn:swrl:var#x"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                <rdf:first>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                                        <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasArgument"/>
+                                                                                        <swrl:argument1 rdf:resource="urn:swrl:var#o4"/>
+                                                                                        <swrl:argument2 rdf:resource="urn:swrl:var#x"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:first>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                        <rdf:first>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                                                <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasArgument"/>
+                                                                                                <swrl:argument1 rdf:resource="urn:swrl:var#o1"/>
+                                                                                                <swrl:argument2 rdf:resource="urn:swrl:var#x"/>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:first>
+                                                                                        <rdf:rest>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                <rdf:first>
+                                                                                                    <rdf:Description>
+                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                                                        <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasArgument"/>
+                                                                                                        <swrl:argument1 rdf:resource="urn:swrl:var#o2"/>
+                                                                                                        <swrl:argument2 rdf:resource="urn:swrl:var#x"/>
+                                                                                                    </rdf:Description>
+                                                                                                </rdf:first>
+                                                                                                <rdf:rest>
+                                                                                                    <rdf:Description>
+                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                        <rdf:first>
+                                                                                                            <rdf:Description>
+                                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                                                                <swrl:classPredicate rdf:resource="https://www.loa.istc.cnr.it/literaryObs#FemaleObs"/>
+                                                                                                                <swrl:argument1 rdf:resource="urn:swrl:var#o2"/>
+                                                                                                            </rdf:Description>
+                                                                                                        </rdf:first>
+                                                                                                        <rdf:rest>
+                                                                                                            <rdf:Description>
+                                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                                <rdf:first>
+                                                                                                                    <rdf:Description>
+                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                                                                        <swrl:classPredicate rdf:resource="https://www.loa.istc.cnr.it/literaryObs#TalkativeAgencyObs"/>
+                                                                                                                        <swrl:argument1 rdf:resource="urn:swrl:var#o1"/>
+                                                                                                                    </rdf:Description>
+                                                                                                                </rdf:first>
+                                                                                                                <rdf:rest>
+                                                                                                                    <rdf:Description>
+                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                                        <rdf:first>
+                                                                                                                            <rdf:Description>
+                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                                                                                <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#assertivelyClaims"/>
+                                                                                                                                <swrl:argument1 rdf:resource="urn:swrl:var#t"/>
+                                                                                                                                <swrl:argument2 rdf:resource="urn:swrl:var#o5"/>
+                                                                                                                            </rdf:Description>
+                                                                                                                        </rdf:first>
+                                                                                                                        <rdf:rest>
+                                                                                                                            <rdf:Description>
+                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                                                <rdf:first>
+                                                                                                                                    <rdf:Description>
+                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                                                                                        <swrl:classPredicate rdf:resource="https://www.loa.istc.cnr.it/literaryObs#ActiveAgencyObs"/>
+                                                                                                                                        <swrl:argument1 rdf:resource="urn:swrl:var#3"/>
+                                                                                                                                    </rdf:Description>
+                                                                                                                                </rdf:first>
+                                                                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                                                            </rdf:Description>
+                                                                                                                        </rdf:rest>
+                                                                                                                    </rdf:Description>
+                                                                                                                </rdf:rest>
+                                                                                                            </rdf:Description>
+                                                                                                        </rdf:rest>
+                                                                                                    </rdf:Description>
+                                                                                                </rdf:rest>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:rest>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/literaryObs#hybridPastourelleCourtlyCharacterIn"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://www.loa.istc.cnr.it/literaryObs#TalkativeAgencyObs"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#o1"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="https://www.loa.istc.cnr.it/literaryObs#FemaleObs"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#o2"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="https://www.loa.istc.cnr.it/literaryObs#EroticObs"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#o3"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="https://www.loa.istc.cnr.it/literaryObs#AuthoritativeAgencyObs"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl:var#o4"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasArgument"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl:var#o1"/>
+                                                        <swrl:argument2 rdf:resource="urn:swrl:var#x"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasArgument"/>
+                                                                <swrl:argument1 rdf:resource="urn:swrl:var#o2"/>
+                                                                <swrl:argument2 rdf:resource="urn:swrl:var#x"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasArgument"/>
+                                                                        <swrl:argument1 rdf:resource="urn:swrl:var#o3"/>
+                                                                        <swrl:argument2 rdf:resource="urn:swrl:var#x"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                                <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#hasArgument"/>
+                                                                                <swrl:argument1 rdf:resource="urn:swrl:var#o4"/>
+                                                                                <swrl:argument2 rdf:resource="urn:swrl:var#x"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                <rdf:first>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                                        <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#assertivelyClaims"/>
+                                                                                        <swrl:argument1 rdf:resource="urn:swrl:var#t"/>
+                                                                                        <swrl:argument2 rdf:resource="urn:swrl:var#o3"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:first>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                        <rdf:first>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                                                <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#assertivelyClaims"/>
+                                                                                                <swrl:argument1 rdf:resource="urn:swrl:var#t"/>
+                                                                                                <swrl:argument2 rdf:resource="urn:swrl:var#o2"/>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:first>
+                                                                                        <rdf:rest>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                <rdf:first>
+                                                                                                    <rdf:Description>
+                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                                                        <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#assertivelyClaims"/>
+                                                                                                        <swrl:argument1 rdf:resource="urn:swrl:var#t"/>
+                                                                                                        <swrl:argument2 rdf:resource="urn:swrl:var#o1"/>
+                                                                                                    </rdf:Description>
+                                                                                                </rdf:first>
+                                                                                                <rdf:rest>
+                                                                                                    <rdf:Description>
+                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                        <rdf:first>
+                                                                                                            <rdf:Description>
+                                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                                                                <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/obs#rejectivelyClaims"/>
+                                                                                                                <swrl:argument1 rdf:resource="urn:swrl:var#t"/>
+                                                                                                                <swrl:argument2 rdf:resource="urn:swrl:var#o4"/>
+                                                                                                            </rdf:Description>
+                                                                                                        </rdf:first>
+                                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                                    </rdf:Description>
+                                                                                                </rdf:rest>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:rest>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://www.loa.istc.cnr.it/literaryObs#pastourelleCharacterIn"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
