@@ -9,7 +9,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#">
     <owl:Ontology rdf:about="https://www.loa.istc.cnr.it/literaryOb/cs">
-        <owl:imports rdf:resource="https://raw.githubusercontent.com/appliedontolab/MITE/refs/heads/main/extension-modules/literary-module.rdf"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/appliedontolab/MITE/refs/heads/main/Archive/CCLS2026/literary-module.rdf"/>
     </owl:Ontology>
     
 
