@@ -4,7 +4,7 @@ Visit the **Website** of the project at: https://www.loa.istc.cnr.it/mite/
 
 Content of the repository:
 * **core-ontology**: it contains the core module of the ontology. The core has to be always imported and extended for applications.
-* **archive**: it contains various materials. The subfolder CCLS2026 contains files presented at the CCLS 2026 conference (see paper below)
+* **archive**: it contains various materials (see subfolders CCLS2026 and JCLS2026 containing files presented in papers for the CCLS 2026 conference and the JCLS journal, respectively).
 
 #### Research related to the ontology:
 
