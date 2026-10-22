@@ -9,6 +9,10 @@ Content of the repository:
 #### Research related to the ontology:
 
 * Emilio M. Sanfilippo, Claudio Masolo, Alessandro Mosca, and Gaia Tomazzoli. _Modeling and Reasoning over Observations:
+An Ontology for Literary Criticism_. Journal of Computational Literary Studies (JCLS). **Journal version, in press**
+[https://doi.org/10.48694/jcls.4742](https://doi.org/10.48694/jcls.4742)
+
+* Emilio M. Sanfilippo, Claudio Masolo, Alessandro Mosca, and Gaia Tomazzoli. _Modeling and Reasoning over Observations:
 An Ontology for Literary Criticism_. Annual Conference of Computational Literary Studies (CCLS 2026). **Conference version**
 [https://doi.org/10.26083/tuda-7993](https://doi.org/10.26083/tuda-7993)
 
